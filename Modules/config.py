@@ -5,8 +5,7 @@
 # # Description: This module configures various constant variables which are used in this project
 # #
 # # Author: Alexandros Iliadis
-# # Project: Music Information Retrieval Techniques for Rhythmic Drum Pattern Generation
-# # Faculty: Electrical & Computer Engineering | Aristotle University Of Thessaloniki
+# # Project: AIron Drummer
 # # Date: July 2022
 # # =====================================================================================================
 # =======================================================================================================

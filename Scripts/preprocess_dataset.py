@@ -5,8 +5,7 @@
 # # Description: This script preprocesses the dataset to transform the data into the format the neural network model requires
 # #
 # # Author: Alexandros Iliadis
-# # Project: Music Information Retrieval Techniques for Rhythmic Drum Pattern Generation
-# # Faculty: Electrical & Computer Engineering | Aristotle University Of Thessaloniki
+# # Project: AIron Drummer
 # # Date: July 2022
 # # =====================================================================================================
 # =======================================================================================================

@@ -5,8 +5,7 @@
 # # Description: This script creates the dataset which will be used to train and evaluate the neural network model
 # #
 # # Author: Alexandros Iliadis
-# # Project: Music Information Retrieval Techniques for Rhythmic Drum Pattern Generation
-# # Faculty: Electrical & Computer Engineering | Aristotle University Of Thessaloniki
+# # Project: AIron Drummer
 # # Date: July 2022
 # # =====================================================================================================
 # =======================================================================================================
