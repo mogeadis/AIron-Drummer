@@ -24,8 +24,6 @@
 ### Project
 **AIron Drummer** generates a MIDI drum track to accompany a musical excerpt contained in an audio (`.wav`) file by utilizing a neural network model. To do this, a MIDI (`.mid`) file containing information about the tempo and time signature changes of the track is also required. Such a file can be created using either a MIDI editor or a Digital Audio Workstation (DAW), while ensuring that the audio and MIDI events are aligned in time. It is crucial that no tempo automations are present within any musical measure; in other words, all measures *must* maintain a constant tempo value. The neural network was trained using a total of 120 MIDI tracks from [Iron Maiden](https://www.ironmaiden.com)'s discography. You can listen to some of the generated samples from tracks not included in the training set [here](https://youtu.be/JYg5VLjR_FE).
 
-![video](Files/Demonstration.mp4)
-
 ### Repository
 The code in this repository is organized into two directories, namely [Scripts](Scripts) and [Modules](Modules). The former contains three *Python* scripts and one *Jupyter Notebook*, which facilitates the integration of its associated code parts with a computing environment such as *Google Colaboratory*. The latter consists of several modules, one of which serves as a configuration file for all but the neural network parameters, which can be tuned in the aforementioned notebook. A third directory contains a handful of [Files](Files) for demonstration purposes and, last but not least, the full text of my [thesis](thesis.pdf) and an abridged published [paper](paper.pdf) are included in the repository for reference. Note that both of these texts are written in Greek, with abstracts provided in English.
 
