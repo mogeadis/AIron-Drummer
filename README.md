@@ -28,7 +28,7 @@
 The code in this repository is organized into two directories, namely [Scripts](Scripts) and [Modules](Modules). The former contains three *Python* scripts and one *Jupyter Notebook*, which facilitates the integration of its associated code parts with a computing environment such as *Google Colaboratory*. The latter consists of several modules, one of which serves as a configuration file for all but the neural network parameters, which can be tuned in the aforementioned notebook. A third directory contains a handful of [Files](Files) for demonstration purposes and, last but not least, the full text of my [thesis](thesis.pdf) and an abridged published [paper](paper.pdf) are included in the repository for reference. Note that both of these texts are written in Greek, with abstracts provided in English.
 
 ### Technical Details
-This project was developed with *Visual Studio Code* on `Windows 10`, using `Python 3.9.7` from the standard *CPython* distribution. The rest of this guide assumes that you are working in a similar environment, although it's not by any means necessary. You can use any available tools to run the code on any operating system, but you should at least have a compatible version of *Python* installed on your machine. 
+This project was developed using *Visual Studio Code* on `Windows 10`, with `Python 3.9.7` from the standard *CPython* distribution. The rest of this guide assumes that you are working in a similar environment, although it's not by any means necessary. You can use any available tools to run the code on any operating system, but you should at least have a compatible version of *Python* installed on your machine. 
 
 
 ## Installation
