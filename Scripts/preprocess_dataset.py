@@ -23,10 +23,8 @@ print('=========================================================================
 import os
 import sys
 sys.path.append(os.path.abspath('Modules'))
-
 from config import *
 from datasetProcessing import *
-
 import numpy as np
 import pandas as pd
 
@@ -45,7 +43,6 @@ features = pd.read_csv(features_path,index_col = ['ID','BAR'],usecols = ['ID','B
 print('- Loading Targets ...')
 targets_path = os.path.join(dataset_path,'targets.csv')
 targets = pd.read_csv(targets_path,index_col = ['ID','BAR'],usecols = ['ID','BAR'] + targets_cols)
-
 print('\n============================================================================================\n')
 
 # =======================================================================================================
@@ -71,7 +68,6 @@ valid_input,valid_output = prepareDataset(valid_features,valid_targets)
 # Testing Set
 print(f'- Preparing Testing Set ({len(test_features.index.value_counts())} Samples) ...')
 test_input,test_output = prepareDataset(test_features,test_targets)
-
 print('\n============================================================================================\n')
 
 # =======================================================================================================

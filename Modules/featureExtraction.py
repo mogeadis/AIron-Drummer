@@ -37,6 +37,7 @@ def getOnsetStrengthSignal(audio,fs,window_length,overlap_length,fft_length,wind
             t = np.append(t,t[-1]+step)
             end_dist = end_sec - t[-1]
 
+    # Return
     return oss,t
 
 # =======================================================================================================
@@ -64,6 +65,7 @@ def getBeatProximity(beats,t):
         # Append List
         beat_proximity.append(proximity)
 
+    # Return
     return beat_proximity
 
 # =======================================================================================================
@@ -75,6 +77,7 @@ def getBarProgress(start_sec,end_sec,t):
     # Calculate Bar Progress
     bar_progress = [(t0 - start_sec)/(end_sec - start_sec) for t0 in t]
 
+    # Return
     return bar_progress
 
 # =======================================================================================================
@@ -120,6 +123,7 @@ def getBarFeatures(audio,start_sec,end_sec,num,den,configuration,return_time = F
     if return_time == True:
         return bar_features,t
 
+    # Return
     return bar_features
 
 # =======================================================================================================
@@ -159,4 +163,5 @@ def getFeatures(audio,measures,configuration,features_cols):
         # Update Features DataFrame
         features = features.append(bar_features)
 
+    # Return
     return features

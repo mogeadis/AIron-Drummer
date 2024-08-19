@@ -37,8 +37,10 @@ def getMaskedLoss(mask_value = -1):
         loss = K.binary_crossentropy(y_true,y_pred) * mask
         loss = K.sum(loss) / K.sum(mask)
 
+        # Return
         return loss
 
+    # Return
     return maskedLoss
 
 # =============================================================================
@@ -73,6 +75,7 @@ def buildModel(input_size,output_size,num_of_units,dropout = 0,mask_value = -1):
                   metrics = [TruePositives(name = 'TP'),TrueNegatives(name = 'TN'),
                              FalsePositives(name = 'FP'),FalseNegatives(name = 'FN')])
 
+    # Return
     return model
 
 # =============================================================================
@@ -175,6 +178,7 @@ def trainModel(model,train_input,train_output,valid_input = None,valid_output = 
     if save_history == True:
         np.save('history.npy',history)
 
+    # Return
     return history
 
 # =============================================================================
@@ -226,6 +230,7 @@ def testModel(model,test_input,test_output,save_results = False):
     if save_results == True:
         np.save('results.npy',results)
 
+    # Return
     return results
 
 # =============================================================================
@@ -359,6 +364,7 @@ def buildEncoderDecoder(model):
     # Decoder Model
     decoder = Model([decoder_Input] + decoder_state_inputs,[decoder_outputs] + decoder_states,name = 'Decoder')
 
+    # Return
     return encoder,decoder
 
 # =============================================================================
@@ -394,4 +400,5 @@ def inference(encoder,decoder,input_sequence,output_shape):
     # Discard Start-Of-Sequence Token Column
     output_sequence = output_sequence[:,1:]
 
+    # Return
     return output_sequence

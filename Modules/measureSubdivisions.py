@@ -25,6 +25,7 @@ def getNumOfNotes(num,den,note_value,triplets):
         num_of_notes = 3*num_of_notes
     num_of_notes = int(num_of_notes)
 
+    # Return
     return num_of_notes
 
 # =======================================================================================================
@@ -41,6 +42,7 @@ def getNotePositions(start_t,end_t,num_of_notes,rounding = False):
         note_positions = note_positions.round().astype('int')
         note_duration = note_duration.round().astype('int')
 
+    # Return
     return note_positions,note_duration
 
 # =======================================================================================================
@@ -55,4 +57,5 @@ def getBeatPositions(start_t,end_t,num):
     # Calculate Offbeats
     offbeats = beats[0:-1] + beat_duration/2
 
+    # Return
     return beats,offbeats

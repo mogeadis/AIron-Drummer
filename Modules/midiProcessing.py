@@ -109,6 +109,7 @@ def getTempoEvents(midi):
                                  'BPM' : tempo_events_bpm,
                                 'USPB' : tempo_events_uspb})
 
+    # Return
     return tempo_events
 
 # =======================================================================================================
@@ -205,6 +206,7 @@ def getTimeSignatureEvents(midi):
                                           'NUM' : time_signature_events_num,
                                           'DEN' : time_signature_events_den})
     
+    # Return
     return time_signature_events
 
 # =======================================================================================================
@@ -270,6 +272,7 @@ def getEvents(midi):
                            'NUM' : events_num,
                            'DEN' : events_den})
 
+    # Return
     return events
 
 # =======================================================================================================
@@ -305,6 +308,7 @@ def getFileEndTicks(midi):
                     if total_ticks >= file_end_ticks:
                         file_end_ticks = total_ticks
 
+    # Return
     return file_end_ticks
 
 # =======================================================================================================
@@ -392,6 +396,7 @@ def getMeasures(midi):
                                    'DEN' : measures_den},
                                    index = pd.Index(data = measures_bar,name = 'BAR'))
 
+    # Return
     return measures
 
 # =======================================================================================================
@@ -403,6 +408,7 @@ def uspbToBPM(uspb):
     #Convert USPB to BPM
     bpm = round(60*(10**6)/uspb)
     
+    # Return
     return bpm
 
 # =======================================================================================================
@@ -414,9 +420,8 @@ def ticksToSeconds(tpb,bpm,ticks):
     # Convert Ticks to Seconds
     seconds = 60/(tpb*bpm)*ticks
 
+    # Return
     return seconds
-    
-#########################################################################################################
 
 # =======================================================================================================
 # Function: getDrumTrackID(...)
@@ -453,6 +458,7 @@ def getDrumTrackID(midi):
         if flag == True:
             break
 
+    # Return
     return drum_track_id
 
 # =======================================================================================================
@@ -472,6 +478,7 @@ def separateTracks(midi):
     if drum_track_id != None:
         drum_track = other_tracks.pop(drum_track_id)
 
+    # Return
     return drum_track,other_tracks
 
 # =======================================================================================================
@@ -493,6 +500,7 @@ def mapNotes(drum_track,drum_map):
             else:
                 drum_track[msg].note = 0
 
+    # Return
     return drum_track
 
 # =======================================================================================================
@@ -540,6 +548,7 @@ def getDrumOnsets(drum_track,drum_parts):
     drum_onsets.index = pd.Index(data = onset_ticks[1:],name = 'TICKS' )
     drum_onsets.columns = drum_part_names
 
+    # Return
     return drum_onsets
 
 # =======================================================================================================
@@ -567,6 +576,7 @@ def getDrumSegments(drum_onsets,measures):
         segment = drum_onsets.loc[start_ticks:end_ticks-1]
         drum_segments.append(segment)
 
+    # Return
     return drum_segments
 
 # =======================================================================================================
@@ -592,6 +602,7 @@ def quantizeDrumOnsets(drum_onsets,note_positions):
     # Normalize to {0,1}
     quant_drum_onsets = quant_drum_onsets.ge(1).astype(int)
 
+    # Return
     return quant_drum_onsets
 
 # =======================================================================================================
@@ -616,6 +627,7 @@ def getBarTargets(drum_onsets,start_ticks,end_ticks,num,den,configuration,return
         ticks = bar_targets.index.values
         return bar_targets,ticks
 
+    # Return
     return bar_targets
 
 # =======================================================================================================
@@ -654,9 +666,8 @@ def getTargets(drum_onsets,measures,configuration,targets_cols):
         # Update Targets DataFrame
         targets = targets.append(bar_targets)
 
+    # Return
     return targets
-
-#########################################################################################################
 
 # =======================================================================================================
 # Function: getTicksIndex(...)
@@ -696,6 +707,7 @@ def getTicksIndex(measures,note_value,triplets):
     # Create Ticks Index
     ticks_index = pd.MultiIndex.from_tuples(tuple(zip(bars,ticks)),names = ['BAR','TICKS'])
 
+    # Return
     return ticks_index
 
 # =============================================================================
@@ -744,6 +756,7 @@ def filterOnsets(drum_onsets):
     # Filter Candidate Onsets
     drum_onsets.loc[candidates.index] = candidates
 
+    # Return
     return drum_onsets
 
 # =======================================================================================================
@@ -809,6 +822,7 @@ def createDrumTrack(drum_onsets,drum_parts,file_end_ticks):
     # Add 'End of Track' Meta Message
     track.append(MetaMessage('end_of_track', time = delta))
 
+    # Return
     return track
 
 # =======================================================================================================
@@ -891,6 +905,7 @@ def generateDrumTrack(midi,audio,model,drum_parts,configuration,bars = (None,Non
     file_end_ticks =  measures_end_ticks[-1] - measures_start_ticks[0]
     drum_track = createDrumTrack(drum_onsets,drum_parts,file_end_ticks)
 
+    # Return
     return drum_track
 
 # =======================================================================================================
@@ -938,6 +953,7 @@ def createEventsTrack(midi):
     # Add 'End of Track' Meta Message
     events_track.append(MetaMessage('end_of_track',time = delta))
 
+    # Return
     return events_track
 
 # =======================================================================================================

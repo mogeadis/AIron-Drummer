@@ -23,11 +23,9 @@ print('=========================================================================
 import os
 import sys
 sys.path.append(os.path.abspath('Modules'))
-
 from config import *
 from midiProcessing import *
 from audioProcessing import *
-
 from mido import MidiFile
 from keras.models import load_model
 

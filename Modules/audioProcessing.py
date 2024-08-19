@@ -37,6 +37,7 @@ def loadAudio(audio_path,fs = None,mono = True,normalization = True):
     if normalization == True:
         audio = -1 + 2*(audio - np.min(audio,axis = 0))/np.ptp(audio,axis = 0) 
 
+    # Return
     return audio,fs
 
 # =======================================================================================================
@@ -68,6 +69,7 @@ def getAudioSegments(audio,fs,measures):
         segment = audio[start_sample:end_sample+1]
         audio_segments.append(segment)
 
+    # Return
     return audio_segments
 
 # =======================================================================================================
@@ -88,6 +90,7 @@ def getSpectrogram(audio,fs,window_length,overlap_length,fft_length,window_type 
     # Time Offset
     t = t + start_sec
 
+    # Return
     return s,t,f
 
 # =======================================================================================================
@@ -119,6 +122,7 @@ def getOSS(s,t,smoothing = False,normalization = False):
     if normalization == True:
         oss = (oss-np.min(oss))/(np.max(oss)-np.min(oss))
     
+    # Return
     return oss,t
 
 # =======================================================================================================
@@ -135,4 +139,5 @@ def secondsToSamples(seconds,fs,rounding = 'round'):
     elif rounding == 'floor':
         samples = int(np.floor(seconds*fs))
 
+    # Return
     return samples
