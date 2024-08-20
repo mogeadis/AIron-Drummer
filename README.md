@@ -99,4 +99,4 @@ To generate a drum track you will simply need to run [`demo.py`](Scripts/demo.py
 
 This license requires that reusers give credit to the creator. It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, for noncommercial purposes only. If others modify or adapt the material, they must license the modified material under identical terms.
 
-See the [LICENSE.md](LICENSE.md) file for more details.
+See the [`LICENSE.md`](LICENSE.md) file for more details.
