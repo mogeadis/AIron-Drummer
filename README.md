@@ -25,7 +25,7 @@
 **AIron Drummer** generates a MIDI drum track to accompany a musical excerpt contained in an audio (`.wav`) file by utilizing a neural network model. To do this, a MIDI (`.mid`) file containing information about the tempo and time signature changes of the track is also required. Such a file can be created using either a MIDI editor or a Digital Audio Workstation (DAW), while ensuring that the audio and MIDI events are aligned in time. It is crucial that no tempo automations are present within any musical measure; in other words, all measures *must* maintain a constant tempo value. The neural network was trained using a total of 120 MIDI tracks from [Iron Maiden](https://www.ironmaiden.com)'s discography. You can listen to some of the generated samples from tracks not included in the training set at the following [link](https://youtu.be/JYg5VLjR_FE).
 
 ### Repository
-The code in this repository is organized into two directories, namely [Scripts](Scripts) and [Modules](Modules). The former contains three *Python* scripts and one *Jupyter Notebook*, which facilitates the integration of its associated code parts with a computing environment such as *Google Colaboratory*. The latter consists of several modules, one of which serves as a configuration file for all but the neural network parameters, which can be tuned in the aforementioned notebook. A third directory contains a handful of [Files](Files) for demonstration purposes and, last but not least, the full text of my [thesis](thesis.pdf) and an abridged published [paper](paper.pdf) are included in the repository for reference. Note that both of these texts are written in Greek, with abstracts provided in English.
+The code in this repository is organized into two directories, namely [*Scripts*](Scripts) and [*Modules*](Modules). The former contains three *Python* scripts and one *Jupyter Notebook*, which facilitates the integration of its associated code parts with a computing environment such as *Google Colaboratory*. The latter consists of several modules, one of which serves as a configuration file for all but the neural network parameters, which can be tuned in the aforementioned notebook. A third directory contains a handful of [*Files*](Files) for demonstration purposes and, last but not least, the full text of my [*thesis*](thesis.pdf) and an abridged published [*paper*](paper.pdf) are included in the repository for reference. Note that both of these texts are written in Greek, with abstracts provided in English.
 
 ### Technical Details
 This project was developed using *Visual Studio Code* on `Windows 10`, with `Python 3.9.7` from the standard *CPython* distribution. The rest of this guide assumes that you are working in a similar environment, although it's not by any means necessary. You can use any available tools to run the code on any operating system, but you should at least have a compatible version of *Python* installed on your machine. 
@@ -74,7 +74,7 @@ Before proceeding, please make sure that you have carefully read the project des
 
 ### Train the Neural Network
 
-There is no need to build a neural network from scratch, as a pretrained model ([`test_model.h5`](Files/test_model.h5)) is already included in the [Files](Files) directory. However, if you wish to train a new model, you will first need to provide a dataset of your own with the following directory structure:
+There is no need to build a neural network from scratch, as a pretrained model ([`test_model.h5`](Files/test_model.h5)) is already included in the [*Files*](Files) directory. However, if you wish to train a new model, you will first need to provide a dataset of your own with the following directory structure:
 
 > Dataset
 >> - Audio
@@ -90,7 +90,7 @@ Then, you will have to assign the path of your dataset directory to the `dataset
 
 ### Generate a Drum Track
 
-To generate a drum track you will simply need to run [`demo.py`](Scripts/demo.py) after setting the paths to your files accordingly. Of course, you can use the example files ([`test_model.h5`](Files/test_model.h5), [`test_midi.mid`](Files/test_midi.mid) & [`test_audio.wav`](Files/test_audio.wav)) which are included in the [Files](Files) directory. The generated drum track MIDI file ([`test_drums.mid`](Files/test_drums.mid)) is included as well, along with the associated synthesized audio sample ([`test_sample.wav`](Files/test_sample.wav)).
+To generate a drum track you will simply need to run [`demo.py`](Scripts/demo.py) after setting the paths to your files accordingly. Of course, you can use the example files ([`test_model.h5`](Files/test_model.h5), [`test_midi.mid`](Files/test_midi.mid) & [`test_audio.wav`](Files/test_audio.wav)) which are included in the [*Files*](Files) directory. The generated drum track MIDI file ([`test_drums.mid`](Files/test_drums.mid)) is included as well, along with the associated synthesized audio sample ([`test_sample.wav`](Files/test_sample.wav)).
 
 
 ## License
