@@ -4,7 +4,7 @@
 # #
 # # Description: This module contains functions that are used to divide a measure into notes and beats
 # #
-# # Author: Alexandros Iliadis
+# # Author: Alexandros Iliadis (https://github.com/mogeadis)
 # # Project: AIron Drummer
 # # Date: July 2022
 # # =====================================================================================================

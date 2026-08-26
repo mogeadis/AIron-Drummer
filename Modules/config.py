@@ -4,7 +4,7 @@
 # #
 # # Description: This module configures various constant variables which are used in this project
 # #
-# # Author: Alexandros Iliadis
+# # Author: Alexandros Iliadis (https://github.com/mogeadis)
 # # Project: AIron Drummer
 # # Date: July 2022
 # # =====================================================================================================

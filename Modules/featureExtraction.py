@@ -4,7 +4,7 @@
 # #
 # # Description: This module contains functions used to extract features from the dataset
 # #
-# # Author: Alexandros Iliadis
+# # Author: Alexandros Iliadis (https://github.com/mogeadis)
 # # Project: AIron Drummer
 # # Date: July 2022
 # # =====================================================================================================

@@ -4,7 +4,7 @@
 # #
 # # Description: This module contains functions used to process audio data
 # #
-# # Author: Alexandros Iliadis
+# # Author: Alexandros Iliadis (https://github.com/mogeadis)
 # # Project: AIron Drummer
 # # Date: July 2022
 # # =====================================================================================================

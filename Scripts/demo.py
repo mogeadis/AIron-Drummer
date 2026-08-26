@@ -4,7 +4,7 @@
 # #
 # # Description: This script demonstrates the implemented system by generating a drum track
 # #
-# # Author: Alexandros Iliadis
+# # Author: Alexandros Iliadis (https://github.com/mogeadis)
 # # Project: AIron Drummer
 # # Date: July 2022
 # # =====================================================================================================

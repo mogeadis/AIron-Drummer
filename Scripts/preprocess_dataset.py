@@ -4,7 +4,7 @@
 # #
 # # Description: This script preprocesses the dataset to transform the data into the format the neural network model requires
 # #
-# # Author: Alexandros Iliadis
+# # Author: Alexandros Iliadis (https://github.com/mogeadis)
 # # Project: AIron Drummer
 # # Date: July 2022
 # # =====================================================================================================
