@@ -95,7 +95,7 @@ To generate a drum track you will simply need to run [`demo.py`](Scripts/demo.py
 
 ## License
 
-*AIron Drummer* © *2022* by *Alexandros Iliadis* is dual-licensed:
+*AIron Drummer* © *2022* by *Alexandros Iliadis* is licensed as follows:
 
 - The thesis text and paper are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).  
 
